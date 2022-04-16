@@ -110,7 +110,7 @@ button {
 
 .sobrenos p {
   text-align: center;
-  max-width: 50%;
+  max-width: 70%;
   line-height: 1.5rem;
 }
 
@@ -133,6 +133,7 @@ button {
   font-size: 3.75rem;
   font-weight: 600;
   color: var(--color-span);
+  margin-left: 1.5rem;
 }
 
 .sobrenos_info_dados h5 {
@@ -227,7 +228,11 @@ button {
   background: rgba(196, 25, 25, .05);
   box-sizing: border-box;
   border-radius: 16px;
+}
 
+.depoimentos {
+  margin-top: 2rem;
+  margin: 0 auto;
 }
 
 .depoimentos-info {
@@ -248,10 +253,7 @@ button {
   margin: 16px 0 32px 0;
 }
 
-.depoimentos {
-  margin-top: 2rem;
-  margin: 0 auto;
-}
+
 
 .depoimentos .depoimentos-info .nome {
   font-size: 1rem;
@@ -312,4 +314,165 @@ button {
 #footer address .address {
   margin-top: 32px;
   font-size: 16px;
+}
+
+/*====== Responsividade ======*/
+
+@media (max-width: 940px) {
+  html {
+    font-size: 85%;
+  }
+}
+
+/*======Menu Hamburguer=========*/
+@media (max-width: 800px) {
+
+  nav {
+    display: none;
+  }
+
+  .one,
+  .two,
+  .three {
+    background-color: #5b5b5c;
+    height: 5px;
+    width: 100%;
+    margin: 6px auto;
+    transition-duration: 0.3s;
+  }
+
+  .menu-burguer {
+    width: 35px;
+    height: 30px;
+    cursor: pointer;
+  }
+
+  .menu-section.active {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-color: #f3f3f3;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menu-section.active nav {
+    display: block;
+  }
+
+  .menu-section.active .menu-burguer {
+    position: absolute;
+    right: 40px;
+    top: 20px;
+  }
+
+  .menu-section.active .menu-burguer .one {
+    transform: rotate(45deg) translate(7px, 7px);
+  }
+
+  .menu-section.active .menu-burguer .two {
+    opacity: 0;
+  }
+
+  .menu-section.active .menu-burguer .three {
+    transform: rotate(-45deg) translate(8px, -9px);
+  }
+
+  .menu-section.active nav ul {
+    display: block;
+    text-align: center;
+  }
+
+  .menu-section.active nav ul a {
+    transition-duration: 0.3s;
+    font-size: 3rem;
+    line-height: 7rem;
+    margin-left: 0;
+  }
+
+  .button {
+    display: none;
+  }
+
+
+
+
+  /*======== Responsividade =======*/
+  .sobrenos_info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .sobrenos_info_dados:nth-child(3),
+  .sobrenos_info_dados:nth-child(4) {
+    margin-top: 30px;
+
+  }
+
+}
+
+/*Responsividade*/
+
+@media (max-width: 664px) {
+
+  .sobrenos p {
+    max-width: 90%;
+  }
+
+  .sobrenos_info {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+
+
+
+  .sobrenos_info_dados {
+    width: 380px;
+    margin-right: 0;
+  }
+
+  .sobrenos_info_dados:nth-child(2) {
+    margin-top: 30px;
+  }
+
+  .vagas-abertas .info-vagas:last-child {
+    margin-bottom: 30px;
+  }
+
+  .depoimentos-info {
+    padding: 20px;
+  }
+
+  .depoimentos .depoimentos-info .p {
+    font-size: 1rem;
+  }
+
+  .depoimentos .depoimentos-info img {
+    display: none;
+  }
+
+  #footer {
+    margin-top: 20px;
+    padding: 15px;
+  }
+
+  #footer h1 {
+    font-size: 1.25rem;
+  }
+
+  #footer p {
+    margin: 9px 0px 13px 0px;
+    color: gray;
+    font-size: 1rem;
+  }
+
 }
